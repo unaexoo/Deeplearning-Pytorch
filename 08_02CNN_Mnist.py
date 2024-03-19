@@ -12,7 +12,7 @@ conv1 = nn.Conv2d(1, 32, 3, padding = 1)
 print(conv1)
 
 # 두 번째 합성곱층
-conv2 = nn.Conv2d(32, 64, kernal_size = 3, padding = 1)
+conv2 = nn.Conv2d(32, 64, kernel_size=3, padding=1)
 print(conv2)
 
 # 맥스 풀링
@@ -34,7 +34,7 @@ out = pool(out)
 print(out.shape)
 
 out.size(0)
-cout.size(1)
+out.size(1)
 out.size(2)
 out.size(3)
 
@@ -42,3 +42,7 @@ out.size(3)
 out = out.view(out.size(0), -1)
 print(out.shape)
 
+# 전결합층(Fully - Connteced layer) 통과
+fc = nn.Linear(3136, 10)
+out = fc(out)
+print(out.shaoe)
